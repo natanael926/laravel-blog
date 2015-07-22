@@ -10,10 +10,15 @@ define('DOMPDF_ENABLE_AUTOLOAD', false);
 // include DOMPDF's default configuration
 require_once '../vendor/dompdf/dompdf/dompdf_config.inc.php';
 
-$html =
-    '<html><body>'.
-    '<p>Aprendiendo composer en el curso de laravel 5.</p>'.
-    '</body></html>';
+$data = array(
+    'name'    => 'Natanael Acosta',
+    'course'  => 'Laravel '
+);
+
+ob_start();
+extract($data);
+include '../templates/pdf/certificate.php';
+$html = ob_get_clean();
 
 $dompdf = new DOMPDF();
 $dompdf->load_html($html);
