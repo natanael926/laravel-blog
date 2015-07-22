@@ -1,0 +1,22 @@
+{
+  "name": "sileence/composer-example",
+  "description": "Ejemplo de uso de Composer",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Natanael Acosta",
+      "email": "natanael926@gmail.com",
+      "homepage": "http://natanael-acosta.com",
+      "role": "praticante"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "dompdf/dompdf": "0.6.*"  
+  },
+  "autoload": {
+    "psr-4": {
+
+    }
+  }
+}
